@@ -1,0 +1,165 @@
+
+/* Class = "UILabel"; text = "Temp:"; ObjectID = "0ou-Dp-NAj"; */
+"0ou-Dp-NAj.text" = "Температура:";
+
+/* Class = "UILabel"; text = "E 8 kmh"; ObjectID = "10E-FW-bn8"; */
+"10E-FW-bn8.text" = "E 8 kmh";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "10k-kk-38H"; */
+"10k-kk-38H.text" = "28";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "13e-mA-iht"; */
+"13e-mA-iht.text" = "28";
+
+/* Class = "UILabel"; text = "en"; ObjectID = "3Zc-qo-WY5"; */
+"3Zc-qo-WY5.text" = "en";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "3vB-aV-nLf"; */
+"3vB-aV-nLf.normalTitle" = "Готово";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "5y7-qs-l6D"; */
+"5y7-qs-l6D.text" = "28";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "6UL-NJ-xUy"; */
+"6UL-NJ-xUy.text" = "28";
+
+/* Class = "UILabel"; text = "Feels:"; ObjectID = "9Ep-sQ-2bG"; */
+"9Ep-sQ-2bG.text" = "Відчувається як:";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "9NX-Bg-hAT"; */
+"9NX-Bg-hAT.text" = "28";
+
+/* Class = "UILabel"; text = "max:"; ObjectID = "AQl-tY-EV7"; */
+"AQl-tY-EV7.text" = "Макс:";
+
+/* Class = "UILabel"; text = "| Party Cloudy"; ObjectID = "Bz0-8e-JLh"; */
+"Bz0-8e-JLh.text" = "| Party Cloudy";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "D3C-gn-9kN"; */
+"D3C-gn-9kN.text" = "Date";
+
+/* Class = "UILabel"; text = "Humidity"; ObjectID = "DSb-ET-STj"; */
+"DSb-ET-STj.text" = "Вологість";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "FVK-Df-W4A"; */
+"FVK-Df-W4A.text" = "28";
+
+/* Class = "UILabel"; text = "61%"; ObjectID = "Fa1-PC-v0h"; */
+"Fa1-PC-v0h.text" = "61%";
+
+/* Class = "UILabel"; text = "11"; ObjectID = "FcP-g8-OvB"; */
+"FcP-g8-OvB.text" = "11";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "FtJ-QE-SQf"; */
+"FtJ-QE-SQf.text" = "28";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "HH5-uv-sa5"; */
+"HH5-uv-sa5.text" = "Налаштування";
+
+/* Class = "UILabel"; text = "11"; ObjectID = "Jc5-w7-2rb"; */
+"Jc5-w7-2rb.text" = "11";
+
+/* Class = "UILabel"; text = "UV Index"; ObjectID = "JgB-6O-Qu1"; */
+"JgB-6O-Qu1.text" = "УФ індекс";
+
+/* Class = "UILabel"; text = "Afternoon"; ObjectID = "LEz-ot-Nrq"; */
+"LEz-ot-Nrq.text" = "День";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "MC8-Do-gZ3"; */
+"MC8-Do-gZ3.text" = "Мова";
+
+/* Class = "UILabel"; text = "7 days"; ObjectID = "OCJ-3T-BxV"; */
+"OCJ-3T-BxV.text" = "Погода на наступні 7 днів";
+
+/* Class = "UILabel"; text = "Morning"; ObjectID = "RMi-xb-OY5"; */
+"RMi-xb-OY5.text" = "Ранок";
+
+/* Class = "UILabel"; text = "Night"; ObjectID = "TXr-aO-pwk"; */
+"TXr-aO-pwk.text" = "Ніч";
+
+/* Class = "UILabel"; text = "Temp:"; ObjectID = "TYr-Ue-gr7"; */
+"TYr-Ue-gr7.text" = "Темература:";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "TxU-Ie-9ZS"; */
+"TxU-Ie-9ZS.text" = "28";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "WYb-DG-51P"; */
+"WYb-DG-51P.normalTitle" = "Скасувати";
+
+/* Class = "UILabel"; text = "Details"; ObjectID = "Wps-zn-0IG"; */
+"Wps-zn-0IG.text" = "Детально";
+
+/* Class = "UILabel"; text = "Feels:"; ObjectID = "Ybq-Pi-fXu"; */
+"Ybq-Pi-fXu.text" = "Відчувається як:";
+
+/* Class = "UILabel"; text = "UV Index"; ObjectID = "cP5-q8-0i7"; */
+"cP5-q8-0i7.text" = "УФ індекс";
+
+/* Class = "UILabel"; text = "2 Jul 2021"; ObjectID = "cbX-b5-70R"; */
+"cbX-b5-70R.text" = "2 Jul 2021";
+
+/* Class = "UILabel"; text = "Wind"; ObjectID = "ce2-cv-oBd"; */
+"ce2-cv-oBd.text" = "Вітер";
+
+/* Class = "UILabel"; text = "Units"; ObjectID = "dJa-N6-Ixy"; */
+"dJa-N6-Ixy.text" = "Одиниці вимірювання";
+
+/* Class = "UILabel"; text = "Pressure"; ObjectID = "dX3-gp-aSH"; */
+"dX3-gp-aSH.text" = "Тиск";
+
+/* Class = "UILabel"; text = "| Party Cloudy"; ObjectID = "def-L8-kvT"; */
+"def-L8-kvT.text" = "| Party Cloudy";
+
+/* Class = "UILabel"; text = "E 8 kmh"; ObjectID = "fKQ-kn-Mgv"; */
+"fKQ-kn-Mgv.text" = "E 8 kmh";
+
+/* Class = "UILabel"; text = "Temp:"; ObjectID = "fXN-jh-bJ3"; */
+"fXN-jh-bJ3.text" = "Температура:";
+
+/* Class = "UILabel"; text = "Wind"; ObjectID = "fie-5P-Jgg"; */
+"fie-5P-Jgg.text" = "Вітер";
+
+/* Class = "UILabel"; text = "30°"; ObjectID = "g9K-tL-CH7"; */
+"g9K-tL-CH7.text" = "30°";
+
+/* Class = "UILabel"; text = "Temp:"; ObjectID = "ghx-yu-e1Q"; */
+"ghx-yu-e1Q.text" = "Температура:";
+
+/* Class = "UILabel"; text = "Humidity"; ObjectID = "gq6-hn-P0k"; */
+"gq6-hn-P0k.text" = "Вологість";
+
+/* Class = "UILabel"; text = "61%"; ObjectID = "hAs-GT-aDN"; */
+"hAs-GT-aDN.text" = "61%";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "hgR-Qv-Mba"; */
+"hgR-Qv-Mba.text" = "28";
+
+/* Class = "UILabel"; text = "Evening"; ObjectID = "jKf-1d-ONP"; */
+"jKf-1d-ONP.text" = "Вечір";
+
+/* Class = "UILabel"; text = "1008 hPa"; ObjectID = "n3h-sZ-DdU"; */
+"n3h-sZ-DdU.text" = "1008 hPa";
+
+/* Class = "UILabel"; text = "Metric"; ObjectID = "oXC-iW-B3Z"; */
+"oXC-iW-B3Z.text" = "Metric";
+
+/* Class = "UILabel"; text = "Feels:"; ObjectID = "ogR-zl-kK9"; */
+"ogR-zl-kK9.text" = "Відчувається як:";
+
+/* Class = "UILabel"; text = "30°"; ObjectID = "osB-yO-H2E"; */
+"osB-yO-H2E.text" = "30°";
+
+/* Class = "UILabel"; text = "30°"; ObjectID = "tIc-Ns-7tt"; */
+"tIc-Ns-7tt.text" = "30°";
+
+/* Class = "UILabel"; text = "Feels:"; ObjectID = "tlN-n0-cKc"; */
+"tlN-n0-cKc.text" = "Відчувається як:";
+
+/* Class = "UILabel"; text = "min:"; ObjectID = "uSf-IC-bL9"; */
+"uSf-IC-bL9.text" = "Мін:";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "uoF-zK-xIS"; */
+"uoF-zK-xIS.text" = "28";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "yAO-VD-rGA"; */
+"yAO-VD-rGA.text" = "Date";

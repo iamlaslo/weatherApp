@@ -11,14 +11,24 @@ import AlamofireObjectMapper
 
 class NetworkManager {
     static let shared = NetworkManager()
-    private init() {
-        
+    private init() { }
+    
+    let appID = "0a23540fe3076492611d448886fefdb6"
+    var baseURL = "https://api.openweathermap.org/data/2.5/onecall"
+    
+    private func buildParameters(lat: String, lon: String) -> [String:String]
+    {
+        return ["lat": lat,
+                "lon": lon,
+                "units": SettingsManager.shared.requestUnits.rawValue,
+                "lang": SettingsManager.shared.requestLanguage.rawValue,
+                "exclude": "hourly,minutely",
+                "appid": appID]
     }
     
-    var url = "https://api.openweathermap.org/data/2.5/onecall?lat=46.4775&lon=30.7326&units=metric&lang=en&exclude=hourly,minutely&appid=0a23540fe3076492611d448886fefdb6"
-    
-    func getWeather(lat: String, lon: String, completion: @escaping (OneCallObject?) -> Void) {
-        AF.request("https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&units=metric&lang=en&exclude=hourly,minutely&appid=0a23540fe3076492611d448886fefdb6").responseObject { (response: DataResponse<OneCallObject, AFError>) in
+    func getWeather(lat: String, lon: String, unit: RequestUnitType = .unitMetric, lang: RequestLangType = .langEn, completion: @escaping (OneCallObject?) -> Void) {
+        
+        AF.request(baseURL, method: .get, parameters: buildParameters(lat: lat, lon: lon)).responseObject { (response: DataResponse<OneCallObject, AFError>) in
             if response.error == nil {
                 do {
                     let obj = try response.result.get()
@@ -34,5 +44,21 @@ class NetworkManager {
         }
     }
     
+    func getIcon(icon: String, completion: @escaping (UIImage) -> Void) {
+        
+        AF.request("https://openweathermap.org/img/wn/\(icon)@2x.png").response { (response: DataResponse<Optional<Data>, AFError>) in
+            if response.error == nil {
+                let dataImg = Data(response.data!)
+                let img = UIImage(data: dataImg)
+                completion(img!)
+            }
+            else {
+                completion(UIImage())
+            }
+            
+        }
+    }
     
 }
+
+

@@ -49,6 +49,7 @@ class RealmManager {
             model.main = weatherObject.main!
             model.desc = weatherObject.description!
             model.icon = weatherObject.icon!
+            
         }
         
         return model
@@ -63,7 +64,7 @@ class RealmManager {
             model.feelsLike = currentObject.feels_like!
             model.humidity = currentObject.humidity!
             model.uvi = currentObject.uvi!
-            model.wind = "TODO"
+            model.wind = getWindString(windDirection: getWindDirection(windDeg: currentObject.wind_deg!), windSpeed: currentObject.wind_speed!)
             model.weather = getCurrentWeatherModels(toObject: toObject)
         }
         
@@ -79,7 +80,7 @@ class RealmManager {
             model.feelsLike = getFeelsLikeModel(toObject: toObject, fromObject: currentObject)
             model.pressure = currentObject.pressure!
             model.humidity = currentObject.humidity!
-            model.wind = "TODO"
+            model.wind = getWindString(windDirection: getWindDirection(windDeg: currentObject.wind_deg!), windSpeed: Int(currentObject.wind_speed!))
             model.weather.append(getDailyWeatherModels(toObject: toObject, fromObject: currentObject))
             model.uvi = currentObject.uvi!
         }
@@ -126,7 +127,7 @@ class RealmManager {
             model.current = getCurrentModels(toObject: toObject!)
             
             // TODO: Check how many days
-            for i in 0..<3 {
+            for i in 0..<7 {
                 model.daily.append(getDailyModels(toObject: toObject!, index: i))
             }
         }
@@ -149,7 +150,7 @@ class RealmManager {
     }
     
     func readModel() -> OneCallModel {
-        guard let model = realm.objects(OneCallModel.self).first else { return OneCallModel() }
+        guard let model = realm.objects(OneCallModel.self).last else { return OneCallModel() }
         return model
     }
     
