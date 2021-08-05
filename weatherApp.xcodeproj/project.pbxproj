@@ -21,8 +21,6 @@
 		FB70066626B9728F002A96BA /* OneCallObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70066026B9728F002A96BA /* OneCallObject.swift */; };
 		FB70066726B9728F002A96BA /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70066126B9728F002A96BA /* Temp.swift */; };
 		FB70066826B9728F002A96BA /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70066226B9728F002A96BA /* Weather.swift */; };
-		FB70066B26B97F93002A96BA /* OneCallObjectRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70066A26B97F93002A96BA /* OneCallObjectRealm.swift */; };
-		FB70066D26B98063002A96BA /* CurrentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70066C26B98063002A96BA /* CurrentModel.swift */; };
 		FB70066F26B98134002A96BA /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70066E26B98134002A96BA /* WeatherModel.swift */; };
 		FB70067126B9819B002A96BA /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70067026B9819B002A96BA /* DailyModel.swift */; };
 		FB70067326B981E5002A96BA /* TempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70067226B981E5002A96BA /* TempModel.swift */; };
@@ -55,6 +53,8 @@
 		FBB01A4A26BB439B006565CF /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB01A4926BB439B006565CF /* Localization.swift */; };
 		FBB01A4D26BB4452006565CF /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBB01A4F26BB4452006565CF /* Localized.strings */; };
 		FBECD00526BA55D3009A4F88 /* getIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECD00426BA55D3009A4F88 /* getIcon.swift */; };
+		FBFF6AFC26BC48E500CF775D /* OneCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFF6AFB26BC48E500CF775D /* OneCallModel.swift */; };
+		FBFF6AFE26BC497B00CF775D /* CurrentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFF6AFD26BC497B00CF775D /* CurrentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +68,6 @@
 		FB43A92A26B9687D001230EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB43A92C26B9687E001230EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB43A92F26B9687E001230EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FB43A93126B9687E001230EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB70065B26B9709B002A96BA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FB70065D26B9728F002A96BA /* Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
 		FB70065E26B9728F002A96BA /* Feels_like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feels_like.swift; sourceTree = "<group>"; };
@@ -76,8 +75,6 @@
 		FB70066026B9728F002A96BA /* OneCallObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneCallObject.swift; sourceTree = "<group>"; };
 		FB70066126B9728F002A96BA /* Temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
 		FB70066226B9728F002A96BA /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		FB70066A26B97F93002A96BA /* OneCallObjectRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCallObjectRealm.swift; sourceTree = "<group>"; };
-		FB70066C26B98063002A96BA /* CurrentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentModel.swift; sourceTree = "<group>"; };
 		FB70066E26B98134002A96BA /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		FB70067026B9819B002A96BA /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
 		FB70067226B981E5002A96BA /* TempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempModel.swift; sourceTree = "<group>"; };
@@ -117,6 +114,8 @@
 		FBB01A5726BB49DA006565CF /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localized.strings; sourceTree = "<group>"; };
 		FBB01A5926BB5887006565CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		FBECD00426BA55D3009A4F88 /* getIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getIcon.swift; sourceTree = "<group>"; };
+		FBFF6AFB26BC48E500CF775D /* OneCallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCallModel.swift; sourceTree = "<group>"; };
+		FBFF6AFD26BC497B00CF775D /* CurrentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +168,7 @@
 		FB43A92226B9687D001230EC /* weatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				FBFF6AFF26BC50BA00CF775D /* New Group */,
 				FB87951F26BA35A700F4A9D9 /* Fonts */,
 				FB70065A26B9708F002A96BA /* Managers */,
 				FB70064D26B96F61002A96BA /* Models */,
@@ -178,7 +178,6 @@
 				FB43A92926B9687D001230EC /* Main.storyboard */,
 				FB43A92C26B9687E001230EC /* Assets.xcassets */,
 				FB43A92E26B9687E001230EC /* LaunchScreen.storyboard */,
-				FB43A93126B9687E001230EC /* Info.plist */,
 				FBECD00426BA55D3009A4F88 /* getIcon.swift */,
 				FBB01A4126BA5E9A006565CF /* DailyViewController.swift */,
 				FBB01A4326BA5F2A006565CF /* UIViewController+Storyboard.swift */,
@@ -212,12 +211,12 @@
 		FB70066926B97F7F002A96BA /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				FB70066A26B97F93002A96BA /* OneCallObjectRealm.swift */,
-				FB70066C26B98063002A96BA /* CurrentModel.swift */,
 				FB70066E26B98134002A96BA /* WeatherModel.swift */,
 				FB70067026B9819B002A96BA /* DailyModel.swift */,
 				FB70067226B981E5002A96BA /* TempModel.swift */,
 				FB70067426B9823D002A96BA /* FeelsLikeModel.swift */,
+				FBFF6AFB26BC48E500CF775D /* OneCallModel.swift */,
+				FBFF6AFD26BC497B00CF775D /* CurrentModel.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -259,6 +258,13 @@
 				FB87952226BA35BA00F4A9D9 /* Montserrat-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FBFF6AFF26BC50BA00CF775D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,17 +415,17 @@
 				FB87951E26BA2ED600F4A9D9 /* SettingsManager.swift in Sources */,
 				FB70066F26B98134002A96BA /* WeatherModel.swift in Sources */,
 				FB70067326B981E5002A96BA /* TempModel.swift in Sources */,
-				FB70066D26B98063002A96BA /* CurrentModel.swift in Sources */,
 				FB43A92426B9687D001230EC /* AppDelegate.swift in Sources */,
 				FBB01A4A26BB439B006565CF /* Localization.swift in Sources */,
 				FBECD00526BA55D3009A4F88 /* getIcon.swift in Sources */,
 				FBB01A4826BB0D74006565CF /* SettingsViewController.swift in Sources */,
 				FBB01A4226BA5E9A006565CF /* DailyViewController.swift in Sources */,
+				FBFF6AFE26BC497B00CF775D /* CurrentModel.swift in Sources */,
 				FB70066626B9728F002A96BA /* OneCallObject.swift in Sources */,
-				FB70066B26B97F93002A96BA /* OneCallObjectRealm.swift in Sources */,
 				FB70065C26B9709B002A96BA /* NetworkManager.swift in Sources */,
 				FB70067126B9819B002A96BA /* DailyModel.swift in Sources */,
 				FB43A92626B9687D001230EC /* SceneDelegate.swift in Sources */,
+				FBFF6AFC26BC48E500CF775D /* OneCallModel.swift in Sources */,
 				FB70066526B9728F002A96BA /* Daily.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
