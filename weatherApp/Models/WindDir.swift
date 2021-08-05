@@ -9,16 +9,7 @@ import Foundation
 
 func getWindString(windDirection: String, windSpeed: Int) -> String {
     
-    let unit: String
-    
-    switch SettingsManager.shared.requestUnits {
-    case .unitMetric:
-        unit = "kmh"
-    case .unitImperial:
-        unit = "mph"
-    case .unitStandart:
-        unit = "hz?"
-    }
+    let unit = getWindUnits()
     
     let output: String = "\(windDirection) \(windSpeed) \(unit)"
     

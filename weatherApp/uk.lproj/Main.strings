@@ -68,6 +68,9 @@
 /* Class = "UILabel"; text = "Language"; ObjectID = "MC8-Do-gZ3"; */
 "MC8-Do-gZ3.text" = "Мова";
 
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "NFf-QT-v5T"; */
+"NFf-QT-v5T.normalTitle" = "Готово";
+
 /* Class = "UILabel"; text = "7 days"; ObjectID = "OCJ-3T-BxV"; */
 "OCJ-3T-BxV.text" = "Погода на наступні 7 днів";
 
@@ -78,7 +81,7 @@
 "TXr-aO-pwk.text" = "Ніч";
 
 /* Class = "UILabel"; text = "Temp:"; ObjectID = "TYr-Ue-gr7"; */
-"TYr-Ue-gr7.text" = "Темература:";
+"TYr-Ue-gr7.text" = "Температура:";
 
 /* Class = "UILabel"; text = "28"; ObjectID = "TxU-Ie-9ZS"; */
 "TxU-Ie-9ZS.text" = "28";
@@ -87,7 +90,7 @@
 "WYb-DG-51P.normalTitle" = "Скасувати";
 
 /* Class = "UILabel"; text = "Details"; ObjectID = "Wps-zn-0IG"; */
-"Wps-zn-0IG.text" = "Детально";
+"Wps-zn-0IG.text" = "Деталі";
 
 /* Class = "UILabel"; text = "Feels:"; ObjectID = "Ybq-Pi-fXu"; */
 "Ybq-Pi-fXu.text" = "Відчувається як:";
@@ -127,6 +130,9 @@
 
 /* Class = "UILabel"; text = "Humidity"; ObjectID = "gq6-hn-P0k"; */
 "gq6-hn-P0k.text" = "Вологість";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "h2z-7C-f0P"; */
+"h2z-7C-f0P.normalTitle" = "Скасувати";
 
 /* Class = "UILabel"; text = "61%"; ObjectID = "hAs-GT-aDN"; */
 "hAs-GT-aDN.text" = "61%";
