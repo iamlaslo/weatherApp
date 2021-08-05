@@ -27,6 +27,7 @@
 		FB70067526B9823D002A96BA /* FeelsLikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70067426B9823D002A96BA /* FeelsLikeModel.swift */; };
 		FB70067826B98368002A96BA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70067726B98368002A96BA /* RealmManager.swift */; };
 		FB70067A26B98EE1002A96BA /* WindDir.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70067926B98EE1002A96BA /* WindDir.swift */; };
+		FB78141326BC7BFD00EDF16F /* GetWindUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78141226BC7BFD00EDF16F /* GetWindUnits.swift */; };
 		FB87951E26BA2ED600F4A9D9 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87951D26BA2ED600F4A9D9 /* SettingsManager.swift */; };
 		FB87953226BA35BA00F4A9D9 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB87952026BA35BA00F4A9D9 /* Montserrat-BoldItalic.ttf */; };
 		FB87953326BA35BA00F4A9D9 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB87952126BA35BA00F4A9D9 /* Montserrat-ExtraBold.ttf */; };
@@ -81,6 +82,7 @@
 		FB70067426B9823D002A96BA /* FeelsLikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelsLikeModel.swift; sourceTree = "<group>"; };
 		FB70067726B98368002A96BA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		FB70067926B98EE1002A96BA /* WindDir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindDir.swift; sourceTree = "<group>"; };
+		FB78141226BC7BFD00EDF16F /* GetWindUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWindUnits.swift; sourceTree = "<group>"; };
 		FB87951D26BA2ED600F4A9D9 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		FB87952026BA35BA00F4A9D9 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
 		FB87952126BA35BA00F4A9D9 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				FBB01A4726BB0D74006565CF /* SettingsViewController.swift */,
 				FBB01A4926BB439B006565CF /* Localization.swift */,
 				FBB01A4F26BB4452006565CF /* Localized.strings */,
+				FB78141226BC7BFD00EDF16F /* GetWindUnits.swift */,
 			);
 			path = weatherApp;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				FB70067126B9819B002A96BA /* DailyModel.swift in Sources */,
 				FB43A92626B9687D001230EC /* SceneDelegate.swift in Sources */,
 				FBFF6AFC26BC48E500CF775D /* OneCallModel.swift in Sources */,
+				FB78141326BC7BFD00EDF16F /* GetWindUnits.swift in Sources */,
 				FB70066526B9728F002A96BA /* Daily.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
