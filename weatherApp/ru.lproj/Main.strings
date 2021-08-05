@@ -163,3 +163,6 @@
 
 /* Class = "UILabel"; text = "Date"; ObjectID = "yAO-VD-rGA"; */
 "yAO-VD-rGA.text" = "Date";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "TiT-kp-LhZ"; */
+"TiT-kp-LhZ.normalTitle" = "Отмена";

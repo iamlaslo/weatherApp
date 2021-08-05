@@ -30,7 +30,14 @@ class SettingsViewController: UIViewController {
     var currentPicker: String?
     var startAtRow: Int?
     
-    // add lang loc
+    var isMenuOpened: Bool?
+    
+    var selectedUnits: RequestUnitType?
+    var oldUnits: RequestUnitType?
+    
+    var selectedLanguage: RequestLangType?
+    var oldLanguage: RequestLangType?
+    
     let unitsPickerVariants: [String] = ["Standart", "Metric", "Imperial"]
     let langPickerVariants: [String] = ["English", "Українська", "Русский"]
     
@@ -39,7 +46,52 @@ class SettingsViewController: UIViewController {
         
         pickerRow = 0
         setValuesToLabels()
+        isMenuOpened = false
+        
+        oldUnits = SettingsManager.shared.requestUnits
+        oldLanguage = SettingsManager.shared.requestLanguage
     }
+    
+    
+    
+    
+    
+    @IBAction func menuDoneClicked(_ sender: UIButton) {
+        let units = SettingsManager.shared.requestUnits
+        let lang = SettingsManager.shared.requestLanguage
+        
+        if units != oldUnits, oldUnits != nil, lang == oldLanguage {
+            restartAlert(withLang: lang, isLang: nil, isUnits: units)
+        } else if lang != oldLanguage, oldLanguage != nil, units == oldUnits {
+            restartAlert(withLang: lang, isLang: lang, isUnits: nil)
+        } else if units != oldUnits, oldUnits != nil,  lang != oldLanguage, oldLanguage != nil {
+            restartAlert(withLang: lang, isLang: lang, isUnits: units)
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func menuCancelClicked(_ sender: UIButton) {
+        var units = SettingsManager.shared.requestUnits
+        var lang = SettingsManager.shared.requestLanguage
+        
+        if oldUnits != nil, oldLanguage != nil {
+            units = oldUnits!
+            lang = oldLanguage!
+        } else if oldUnits != nil {
+            units = oldUnits!
+        } else if oldLanguage != nil {
+            lang = oldLanguage!
+        }
+        
+        SettingsManager.shared.requestUnits = units
+        SettingsManager.shared.requestLanguage = lang
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     
     func setValuesToLabels() {
         unitsLabel.text = SettingsManager.shared.requestUnits.rawValue
@@ -50,8 +102,11 @@ class SettingsViewController: UIViewController {
         currentPicker = "units"
         pickerView.reloadAllComponents()
         pickerVariants = unitsPickerVariants
-        pickerMenuView.isHidden = false
-//        pickerMenuView.show()
+        
+        if isMenuOpened! == false {
+            pickerMenuView.animShow()
+        }
+        isMenuOpened = true
         
         let previousUnits = SettingsManager.shared.requestUnits.rawValue
         
@@ -67,31 +122,46 @@ class SettingsViewController: UIViewController {
         }
     }
     
-//    func unitsRestartAlert(withLang: ) {
-//        if toLanguage == .langEn {
-//            alert.title = "Please, restart the app"
-//            alert.message = "We need to restart app to change the language"
-//        } else if toLanguage == .langRu {
-//            alert.title = "Пожалуйста, перезапустите приложение"
-//            alert.message = "Для изменения языка необходимо перезапустить приложение"
-//        } else if toLanguage == .langUa {
-//            alert.title = "Будь ласка, перезапустіть додаток"
-//            alert.message = "Для зміни мови потрібно перезапустити додаток"
-//        }
-//    }
-    
-    func restartAlert(toLanguage: RequestLangType) {
+    func restartAlert(withLang: RequestLangType, isLang: RequestLangType?, isUnits: RequestUnitType?) {
         let alert = UIAlertController()
         
-        if toLanguage == .langEn {
+        var title: String = ""
+        
+        if isLang != nil && isUnits != nil {
+            if isLang == .langEn {
+                title = "language and units"
+            } else if isLang == .langRu {
+                title = "языка и единиц измерения"
+            } else if isLang == .langUa {
+                title = "мови та одиниць виміру"
+            }
+        } else if isLang != nil && isUnits == nil {
+            if isLang == .langEn {
+                title = "language"
+            } else if isLang == .langRu {
+                title = "языка"
+            } else if isLang == .langUa {
+                title = "мови"
+            }
+        } else if isLang == nil && isUnits != nil {
+            if isLang == .langEn {
+                title = "units"
+            } else if isLang == .langRu {
+                title = "единиц измерения"
+            } else if isLang == .langUa {
+                title = "одиниць виміру"
+            }
+        }
+        
+        if withLang == .langEn {
             alert.title = "Please, restart the app"
-            alert.message = "We need to restart app to change the language"
-        } else if toLanguage == .langRu {
+            alert.message = "You need to restart the app to change the \(title)"
+        } else if withLang == .langRu {
             alert.title = "Пожалуйста, перезапустите приложение"
-            alert.message = "Для изменения языка необходимо перезапустить приложение"
-        } else if toLanguage == .langUa {
+            alert.message = "Для изменения \(title) необходимо перезапустить приложение"
+        } else if withLang == .langUa {
             alert.title = "Будь ласка, перезапустіть додаток"
-            alert.message = "Для зміни мови потрібно перезапустити додаток"
+            alert.message = "Для зміни \(title) потрібно перезапустити додаток"
         }
         
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
@@ -106,22 +176,20 @@ class SettingsViewController: UIViewController {
         currentPicker = "lang"
         pickerView.reloadAllComponents()
         pickerVariants = langPickerVariants
-        pickerMenuView.isHidden = false
+        if isMenuOpened! == false {
+            pickerMenuView.animShow()
+        }
+        
+        isMenuOpened = true
     }
     
     @IBAction func pickerSkipClicked(_ sender: UIButton) {
-//        pickerMenuView.isHidden = true
-//        PickerMenuView.hide(pickerMenuView)
-//        pickerMenuView.hide()
-        pickerMenuView.fadeOut()
+        pickerMenuView.isHidden = true
+        isMenuOpened = false
     }
     
     @IBAction func pickerDoneClicked(_ sender: UIButton) {
-        
         if currentPicker == "units" {
-            var selectedUnits: RequestUnitType
-            print(SettingsManager.shared.requestUnits.rawValue)
-            
             switch pickerRow {
             case 0:
                 selectedUnits = RequestUnitType.unitStandart
@@ -133,17 +201,11 @@ class SettingsViewController: UIViewController {
                 selectedUnits = SettingsManager.shared.requestUnits
             }
             
-            SettingsManager.shared.requestUnits = selectedUnits
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            guard let MainViewController = storyboard.instantiateViewController(identifier: "MainVC") as? ViewController else { return }
-            
-            
-            MainViewController.reloadLocation()
+            if SettingsManager.shared.requestUnits != selectedUnits, selectedUnits != nil {
+                SettingsManager.shared.requestUnits = selectedUnits!
+            }
             
         } else if currentPicker == "lang" {
-            var selectedLanguage: RequestLangType
-            
             switch pickerRow {
             case 0:
                 selectedLanguage = RequestLangType.langEn
@@ -161,9 +223,10 @@ class SettingsViewController: UIViewController {
                 selectedLanguage = SettingsManager.shared.requestLanguage
             }
             
-            if SettingsManager.shared.requestLanguage != selectedLanguage {
-                SettingsManager.shared.requestLanguage = selectedLanguage
-                restartAlert(toLanguage: selectedLanguage)
+            
+            
+            if SettingsManager.shared.requestLanguage != selectedLanguage, selectedLanguage != nil {
+                SettingsManager.shared.requestLanguage = selectedLanguage!
             }
             
         } else {
@@ -171,7 +234,9 @@ class SettingsViewController: UIViewController {
         }
         
         setValuesToLabels()
+        
         pickerMenuView.isHidden = true
+        isMenuOpened = false
     }
 }
 
@@ -199,25 +264,23 @@ extension SettingsViewController: UIPickerViewDelegate {
 }
 
 
-extension UIView {
-
-func fadeIn(duration: TimeInterval = 0.5, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in }) {
-    self.alpha = 0.0
-
-    UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
+extension UIView{
+    func animShow(){
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseIn],
+                       animations: {
+                        self.center.y -= self.bounds.height
+                        self.layoutIfNeeded()
+        }, completion: nil)
         self.isHidden = false
-        self.alpha = 1.0
-    }, completion: completion)
-}
-
-func fadeOut(duration: TimeInterval = 0.5, delay: TimeInterval = 0.0, completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in }) {
-    self.alpha = 1.0
-
-    UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
-        self.alpha = 0.0
-    }) { (completed) in
-        self.isHidden = true
-        completion(true)
     }
-  }
+    func animHide(){
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveLinear],
+                       animations: {
+                        self.center.y += self.bounds.height
+                        self.layoutIfNeeded()
+
+        },  completion: {(_ completed: Bool) -> Void in
+        self.isHidden = true
+            })
+    }
 }
