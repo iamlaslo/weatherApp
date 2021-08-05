@@ -38,10 +38,14 @@ class DailyViewController: UIViewController {
     
     var model: DailyModel?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
+        
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
     }
     
     func setUI() {
@@ -81,4 +85,11 @@ class DailyViewController: UIViewController {
         
     }
     
+}
+
+
+extension DailyViewController:UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }
