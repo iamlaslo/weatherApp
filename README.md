@@ -1,31 +1,31 @@
 # weatherApp
 
 Technologies which I used in this app and learned how to work with them:
-Xcode
-Swift
-Git and GitHub
-UIKit
-CocoaPods
-Alamofire
-ObjectMapper
-Realm
-Delegates and DataSources
-Segues
-Auto Layout 
-Constraints
-Stack views
-UserDefaults
-UICollectionView
-UIPickerView
-UIGestureRecognizer
-LocationManager
-Open Weather OneCall API
-Swift Dates
-DateFormatter
-Alerts
-Singleton pattern
-Localization
-Custom fonts
+- Xcode
+- Swift
+- Git and GitHub
+- UIKit
+- CocoaPods
+- Alamofire
+- ObjectMapper
+- Realm
+- Delegates and DataSources
+- Segues
+- Auto Layout 
+- Constraints
+- Stack views
+- UserDefaults
+- UICollectionView
+- UIPickerView
+- UIGestureRecognizer
+- LocationManager
+- Open Weather OneCall API
+- Swift Dates
+- DateFormatter
+- Alerts
+- Singleton pattern
+- Localization
+- Custom fonts
 
 Description of the applications’ algorithm:
 When a user is using this app for the first time, the first thing which he would see is an alert that asks about location sharing. If a user permits to use his location, the app creates an instance of LocationManager, gets the user’s location, and passes data next to the NetworkManager which is based on Alamofire. It creates a GET request to the OpenWeatherMap API with parameters of the user’s longitude and latitude, the default language of the user’s device, and the default unit system (Metric). Response of this operation transfers to the function’s escaping callback, which is passing back to the NetworkManager, where it writes to the Realm’s model via the WriteModel method of the RealmManager class, and then it’s passing to the updateUI function, which starts working in the main async queue. This transfer between queues helps to avoid the delay in the app’s interface creating and responding to the user’s actions. After this operations data from the API request comes to all the labels and images in the View and UICollectionView’s DataSource. 
