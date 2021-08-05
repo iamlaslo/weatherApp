@@ -7,18 +7,6 @@
 
 import Foundation
 
-enum RequestLangType: String, CaseIterable {
-    case langEn = "en"
-    case langUa = "ua"
-    case langRu = "ru"
-}
-
-enum RequestUnitType: String {
-    case unitStandart = "standart"
-    case unitMetric = "metric"
-    case unitImperial = "imperial"
-}
-
 class SettingsManager {
     static let shared = SettingsManager()
     private init() { }
@@ -39,7 +27,6 @@ class SettingsManager {
         }
         set {
             storage.setValue(newValue.rawValue, forKey: StorageKey.storageLangKey.rawValue)
-            NetworkManager.shared
         }
     }
     

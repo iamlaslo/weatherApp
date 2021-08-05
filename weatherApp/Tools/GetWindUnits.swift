@@ -5,8 +5,6 @@
 //  Created by Vlad Kozlov on 5.8.2021.
 //
 
-import Foundation
-
 func getWindUnits() -> String {
     let lang = SettingsManager.shared.requestLanguage
     let units = SettingsManager.shared.requestUnits
