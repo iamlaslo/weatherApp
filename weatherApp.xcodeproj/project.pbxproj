@@ -198,6 +198,7 @@
 		FB43A92226B9687D001230EC /* weatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				FBFBDE7026BD194500FF87A6 /* New Group */,
 				FB78141826BC8A6000EDF16F /* Tools */,
 				FB78141626BC895C00EDF16F /* Views */,
 				FB78141426BC892800EDF16F /* Controllers */,
@@ -205,8 +206,6 @@
 				FB87951F26BA35A700F4A9D9 /* Fonts */,
 				FB70065A26B9708F002A96BA /* Managers */,
 				FB70064D26B96F61002A96BA /* Models */,
-				FB43A92926B9687D001230EC /* Main.storyboard */,
-				FB43A92E26B9687E001230EC /* LaunchScreen.storyboard */,
 			);
 			path = weatherApp;
 			sourceTree = "<group>";
@@ -282,6 +281,8 @@
 		FB78141626BC895C00EDF16F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FB43A92926B9687D001230EC /* Main.storyboard */,
+				FB43A92E26B9687E001230EC /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -415,6 +416,13 @@
 				FB87952226BA35BA00F4A9D9 /* Montserrat-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FBFBDE7026BD194500FF87A6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
